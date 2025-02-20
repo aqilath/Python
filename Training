@@ -1,0 +1,22 @@
+def cari_ganjil_genap(angka_list):
+    ganjil = []
+    genap = []
+    
+    for angka in angka_list:
+        if angka % 2 == 0:
+            genap.append(angka)
+        else:
+            ganjil.append(angka)
+    
+    return ganjil, genap
+
+# Input dari pengguna (dipisahkan dengan spasi)
+angka_input = input("Masukkan daftar angka (pisahkan dengan spasi): ")
+angka_list = list(map(int, angka_input.split()))
+
+# Panggil fungsi untuk mencari ganjil dan genap
+ganjil, genap = cari_ganjil_genap(angka_list)
+
+# Tampilkan hasil
+print(f"Bilangan Ganjil: {ganjil}")
+print(f"Bilangan Genap: {genap}")
